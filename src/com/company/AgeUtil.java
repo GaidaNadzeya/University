@@ -1,12 +1,13 @@
 package com.company;
 
 public class AgeUtil {
-    public static void checkAge(int age) {
+    public static boolean checkAge(int age) {
         try {
             check(age);
-            System.out.println("Подходит");
+           return true;
         } catch (AgeException e) {
             System.out.println(e.getMessage());
+            return false;
         }
     }
 

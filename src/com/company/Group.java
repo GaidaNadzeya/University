@@ -8,7 +8,7 @@ import java.util.List;
 public class Group {
     private String nameGroup;
     private int course;
-    private List<Student> studentList = new ArrayList<>();
+    public List<Student> studentList = new ArrayList<>();
     private Teacher teacher;
     private int yearEnd;
     private int yearStart;

@@ -8,7 +8,10 @@ public class People {
 
     public People(String FIO, int age, Address address) {
         this.FIO = FIO;
-        this.age = age;
+        if (AgeUtil.checkAge(age)){
+            this.age = age;
+        }
+
         this.address = address;
     }
 

@@ -1,12 +1,21 @@
 package com.company;
 
-import java.util.*;
+import com.company.util.ParserUtil;
+
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class Main {
 
     public static void main(String[] args) throws AgeException {
+        List<Student> studentList = ParserUtil.createStudents("student.txt");
+        List<Teacher> teacherList= ParserUtil.createTeacher("teacher.txt");
+
         Address address1 = new Address("Минск", "Ленина", 5, 150);
         Teacher teacher1 = new Teacher("Иванов.И.И", 40, address1, 3.7, 100);
         Teacher teacher2 = new Teacher("Сидоров.И.И", 30, address1, 3.7, 150);
@@ -58,6 +67,9 @@ public class Main {
         Collections.sort(groupList, yearComparator);
         System.out.println(groupList);
 
+
+
     }
+
 
 }
